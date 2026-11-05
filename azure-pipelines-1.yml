@@ -19,9 +19,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-# Maven
 - task: Maven@4
   inputs:
+    azureSubscription: 'Azure for Students(5daedd1e-b534-4303-8de2-4cc92e9844e4)'
     mavenPomFile: 'pom.xml'
     goals: 'clean test'
     publishJUnitResults: true
